@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./css/style.css" />
+
   </head>
   <body>
+    <div class="menu__close"></div>
+
     <header class="header">
       <div class="container">
         <div class="header__inner">
@@ -18,8 +21,7 @@
           </a>
 
           <nav class="header__menu">
-
-            <button class="header__menu-btn" >
+            <button class="header__menu-btn">
               <span class="header__menu-btn-line"></span>
               <span class="header__menu-btn-line"></span>
               <span class="header__menu-btn-line"></span>
@@ -27,6 +29,15 @@
             </button>
 
             <ul class="header__list">
+              <li class="header__menu__close">
+                <button class="header__menu__close-btn">
+                  <img
+                    class="header__menu__close-btn-img"
+                    src="./images/close.svg"
+                    alt=""
+                  />
+                </button>
+              </li>
               <li class="header__item">
                 <a class="header__link" href="#"> Black </a>
               </li>
@@ -45,6 +56,60 @@
 
               <li class="header__item">
                 <a class="header__link" href="#"> Pu-erh </a>
+              </li>
+
+              <!----------- header__mobile ----------->
+              <li class="header__mobile-nav">
+                <ul class="header__mobile-menu">
+                  <li class="header__mobile-menu__item">
+                    <a class="header__mobile-menu__link" href="#">
+                      Contact Us
+                    </a>
+                  </li>
+
+                  <li class="header__mobile-menu__item">
+                    <a class="header__mobile-menu__link" href="#"> Our Blog </a>
+                  </li>
+
+                  <li class="header__mobile-menu__item">
+                    <a class="header__mobile-menu__link" href="#">
+                      Shipping and Delivery
+                    </a>
+                  </li>
+                </ul>
+
+                <ul class="header__mobile-actions">
+                  <li class="header__mobile-actions__item">
+                    <a class="header__mobile-actions__link" href="#">
+                      <img
+                        class="header__mobile-actions__img"
+                        src="./images/card.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+
+                  <li class="header__mobile-actions__item">
+                    <a class="header__mobile-actions__link" href="#">
+                      <img
+                        class="header__mobile-actions__img"
+                        src="./images/user.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+
+                  <li class="header__mobile-actions__item">
+                    <a class="header__mobile-actions__link" href="#">
+                      <img
+                        class="header__mobile-actions__img"
+                        src="./images/search.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                </ul>
+                <!----------- end header__mobile ----------->
               </li>
             </ul>
           </nav>
@@ -99,5 +164,7 @@
         </p>
       </blockquote>
     </main>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
