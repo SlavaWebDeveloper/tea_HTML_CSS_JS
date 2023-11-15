@@ -25,13 +25,12 @@ button {
 
 /*----------- container -----------*/
 .container {
-  --container-width: 1160px;
+  --container-width: 1200px;
   --container-padding: 20px;
   max-width: calc(var(--container-width) + var(--container-padding) * 2);
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
-
 
 @media (max-width: 680px) {
   .container {
@@ -41,26 +40,40 @@ button {
 /*----------- end container -----------*/
 
 body {
+  position: relative;
   color: #151618;
   /* font-family: 'Cormorant', serif; */
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 20px;
-  line-height: 1.5;
-  position: relative;
+  line-height: normal;
 }
 
+.title {
+  margin-bottom: 60px;
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+}
+
+@media (max-width: 360px) {
+  .title {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+}
 
 .menu__close {
-  display: none;
   position: fixed;
-  left: 0;
-  right: 0;
   top: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color .3s ease;
-  z-index: 1;
 }
 
 .menu__close.menu__open {
@@ -168,11 +181,11 @@ body {
 }
 
 .header__menu-btn {
+  position: relative;
+  z-index: 2;
   display: none;
   width: 40px;
   height: 20px;
-  position: relative;
-  z-index: 2;
 }
 
 .header__menu-btn-line {
@@ -190,19 +203,18 @@ body {
 }
 
 .header__list {
+  position: relative;
+  z-index: 3;
   display: flex;
   align-items: center;
   gap: 0 65px;
+  margin-left: 85px;
   font-weight: 400;
   font-size: 18px;
-  margin-left: 85px;
-  position: relative;
-  z-index: 3;
 }
 
 @media (max-width: 860px) {
   .header__list {
-    transform: translateY(-100%);
     position: absolute;
     top: 0;
     right: 0;
@@ -214,6 +226,7 @@ body {
     text-align: center;
     background-color: #fff;
     transition: transform .7s ease;
+    transform: translateY(-100%);
   }
 }
 
@@ -233,10 +246,10 @@ body {
 
 @media (max-width: 860px) {
   .header__menu__close {
-    display: block;
     position: absolute;
     top: 20px;
     right: 20px;
+    display: block;
   }
 }
 
@@ -404,7 +417,6 @@ body {
 @media (max-width: 680px) {
   .top__title {
     font-size: 40px;
-    line-height: normal;
   }
 }
 
@@ -419,7 +431,6 @@ body {
   max-width: 560px;
   margin-bottom: 48px;
   font-size: 24px;
-  line-height: normal;
 }
 
 @media (max-width: 360px) {
@@ -442,7 +453,6 @@ body {
   font-weight: 300;
   font-size: 40px;
   font-style: italic;
-  line-height: normal;
   text-align: center;
 }
 
@@ -477,22 +487,346 @@ body {
 
 /*----------- end blockquote -----------*/
 
-
-/*----------- end main -----------*/
-
-
-@media (max-width: 1000px) {
-  
+/*----------- assortment -----------*/
+.assortment {
+  margin-bottom: 150px;
 }
 
-@media (max-width: 768px) {
-  
+@media (max-width: 1000px) {
+  .assortment {
+    margin-bottom: 120px;
+  }
 }
 
 @media (max-width: 480px) {
-  
+  .assortment {
+    margin-bottom: 60px;
+  }
 }
 
 @media (max-width: 360px) {
-  
+  .assortment {
+    margin-bottom: 80px;
+  }
 }
+
+.assortment__list {
+  display: flex;
+  gap: 0 40px;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .assortment__list {
+    gap: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .assortment__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .assortment__list {
+    max-width: 170px;
+    margin: 0 auto;
+  }
+}
+
+.assortment__item {
+
+}
+
+.assortment__img {
+  width: 100%;
+  max-width: 208px;
+  max-height: 208px;
+}
+
+.assortment__name {
+  padding-top: 10px;
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: 24px; 
+}
+/*----------- end assortment -----------*/
+
+/*----------- reviews -----------*/
+.reviews {
+  padding: 60px 0;
+  background-color: #F7F2EA;
+}
+
+@media (max-width: 480px) {
+  .reviews {
+    padding: 50px 0;
+  }
+}
+
+.revies__title {
+
+}
+
+.reviews__list {
+  display: flex;
+  justify-content: center;
+  gap: 0 26px;
+}
+
+@media (max-width: 768px){
+  .reviews__list{
+    flex-wrap: wrap;
+    gap: 30px 76px; 
+  }
+}
+
+@media (max-width: 480px){
+  .reviews__list{
+    gap: 30px 20px; 
+  }
+}
+
+.reviews__item {
+  flex-basis: 280px;
+}
+
+/* .reviews__item.reviews__item-hide {
+  display: none;
+} #TODO: for js */ 
+
+@media (max-width: 1000px){
+  .reviews__item:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 768px){
+  .reviews__item:last-child {
+    display: block;
+  }
+}
+
+@media (max-width: 480px){
+  .reviews__item {
+    flex-basis: 220px;
+  }
+}
+
+.reviews__blockqueote {
+
+}
+
+.reviews__text {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.reviews__name {
+  font-weight: 600;
+  font-style: normal;
+}
+/*----------- end reviews -----------*/
+
+/*----------- main-blog  -----------*/
+.main-blog {
+  padding: 150px 0;
+}
+
+.main-blog__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 58px;
+  margin-bottom: 72px;
+}
+
+.main-blog__item {
+  display: flex;
+  flex-basis: 542px;
+  gap: 0 20px;
+}
+
+.main-blog__item-img {
+
+}
+
+.main-blog__item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-blog__item-title {
+  min-height: 86px;
+  margin-bottom: 10px;
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.main-blog__item-author {
+  font-size: 13px;
+}
+
+.main-blog__item-link {
+  position: relative;
+  margin-top: auto;
+  font-size: 13px;
+}
+
+.main-blog__item-link::after {
+  content:'';
+  position: absolute;
+  bottom: 3px;
+  width: 5px;
+  height: 10px;
+  margin-left: 8px;
+  background-image: url('../images/arrow.svg');
+}
+
+.main-blog__link {
+  display: flex;
+  justify-content: center;
+  width: 154px;
+  margin: auto;
+  border: 1px solid #151618;
+  padding: 12px 41px;
+}
+/*----------- end main-blog  -----------*/
+
+/*----------- mailing-list  -----------*/
+.mailing-list {
+  padding: 100px 0;
+  background-color: #F7F2EA;
+  background-image: url('../images/mailing.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.mailing-list__title {
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.mailing-list__inner {
+  display: flex;
+  gap: 60px 40px;
+}
+
+.mailing-list__text {
+  line-height: 1.5;
+  flex-basis: 580px;
+}
+
+.mailing-list__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 580px;
+}
+
+.mailing-list__form-email {
+  width: 436px;
+  margin-right: 25px;
+  border: none;
+  border-bottom: 1px solid #B8B58B;
+  padding: 3px 15px;
+  color: #151618;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 1.5;
+  background-color: transparent;
+}
+
+.mailing-list__form-email::placeholder {
+  color: #B8B58B;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.mailing-list__form-btn {
+  border: 1px solid #151618;
+  padding: 12px 41px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.mailing-list__label {
+  margin-top: 16px;
+}
+
+/*----------- checkbox -----------*/
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  /* clip-path: inset(0 0 0 0); */
+  padding-left: 20px;
+  clip: rect(0, 0, 0, 0);
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.checkbox-style {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #151618;
+  margin-top: 5px;
+}
+
+.checkbox-text {
+  font-size: 13px;
+  padding-left: 20px;
+}
+
+.checkbox:checked + .checkbox-style::before {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: 1px;
+  left: 1px;
+  background-color: #151618;
+}
+/*----------- end checkbox  -----------*/
+
+/*----------- end mailing-list  -----------*/
+
+/*----------- prioritise  -----------*/
+.prioritise {
+
+}
+
+.prioritise__title {
+
+}
+
+.prioritise__list {
+
+}
+
+.prioritise__item {
+
+}
+
+.prioritise__text {
+
+}
+
+.prioritise__img {
+
+}
+/*----------- end prioritise  -----------*/
+
+
+/*----------- end main -----------*/
