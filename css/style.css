@@ -1066,8 +1066,8 @@ body {
 
 @media (max-width: 360px) {
   .prioritise__text {
-    font-size: 10px;
     font-weight: 400;
+    font-size: 10px;
   }
 }
 
@@ -1078,3 +1078,222 @@ body {
 
 
 /*----------- end main -----------*/
+
+/*----------- footer -----------*/
+.footer {
+  padding: 100px 0 20px;
+  background-color: #F7F2EA;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 40px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 1000px) {
+  .footer__inner {
+    margin-bottom: 55px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer__inner {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.footer__products {
+
+}
+
+@media (max-width: 900px) {
+  .footer__products {
+    grid-row: span 3;
+  }
+}
+
+.footer__products-title,
+.footer__company-title,
+.footer__contacts-title {
+  margin-bottom: 50px;
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.footer__products-item,
+.footer__company-item {
+  margin-bottom: 20px;
+}
+
+.footer__company {
+
+}
+
+@media (max-width: 900px) {
+  .footer__company {
+    grid-row: span 3;
+  }
+}
+
+.footer__blockquote {
+
+}
+
+@media (max-width: 1000px) {
+  .footer__blockquote {
+    width: 270px;
+  }
+}
+
+.footer_blockquote-text {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+@media (max-width: 1000px) {
+  .footer_blockquote-text {
+    margin-top: 0;
+  }
+}
+
+.footer__blockquote-author {
+  font-size: 12px;
+  font-style: normal;
+}
+
+.footer__blockquote-author-post {
+  display: block;
+}
+
+.footer__contacts {
+  margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+  .footer__contacts {
+    width: 270px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer__contacts {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+}
+
+.footer__contacts-text {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__nav-logo {
+  margin-right: 40px;
+}
+
+@media (max-width: 1000px) {
+  .footer__nav-logo {
+    margin-right: 35px;
+  }
+}
+
+.footer__logo {
+
+}
+
+.footer__logo-img {
+
+}
+
+.footer__nav-contacts {
+
+}
+
+.footer__nav-phone,
+.footer__nav-email {
+  font-size: 13px;
+  position: relative;
+  padding-left: 32px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer__nav-phone::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 21px;
+  height: 21px;
+  background-image: url('../images/phone.svg');
+}
+
+.footer__nav-email::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 16px;
+  background-image: url('../images/message.svg');
+}
+
+.footer__social {
+  margin-top: 40px;
+  margin-left: 97px;
+}
+
+.footer__social-list {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+} 
+
+.footer__social-item {
+
+}
+
+.footer__social-link {
+  display: grid;
+}
+
+.footer__bottom {
+  display: flex;
+}
+
+.footer__copy {
+  margin-right: 192px;
+  font-size: 16px;
+}
+
+@media (max-width: 1000px) {
+  .footer__copy  {
+    margin-right: 85px;
+  }
+}
+
+/*----------- end footer -----------*/
+
+/*----------- partners -----------*/
+.partners-logo {
+  display: flex;
+  gap: 20px;
+}
+
+.partners-logo__item {
+  display: grid;
+  align-items: center;
+}
+
+
+/*----------- end partners -----------*/
